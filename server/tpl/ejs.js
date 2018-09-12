@@ -6,7 +6,11 @@ module.exports = `
 <title>koa</title>
 </head>
 <body>
-   <div>hello jehol</div>
+   <%if (user) {%>
+       <h1><%= user.content %></h1>
+
+    <h2><%= user.name %></h2>
+<% }%>
 </body>
 </html>
 `

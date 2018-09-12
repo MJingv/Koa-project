@@ -1,4 +1,7 @@
-const normalTpl = require('./normal.js')
+const htmlTpl = require('./html.js')
+const ejsTpl = require('./ejs.js')
+const pugTpl = require('./pug.js')
+
 module.exports = {
-    normal: normalTpl
+    htmlTpl, ejsTpl, pugTpl
 }
