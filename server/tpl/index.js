@@ -1,2 +1,4 @@
-const normTpl = require('./normal')
-mou
+const normalTpl = require('./normal.js')
+module.exports = {
+    normal: normalTpl
+}
