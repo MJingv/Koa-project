@@ -44,16 +44,12 @@ exports.connect = () => {
                 if (err) return console.log(err)
                 console.log('------save-----')
                 console.log(jj)
-
             })
-
             jehol.find(function (err, jj) {
                 if (err) return console.error(err)
                 console.log(jj)
             })
-
             resolve()
-
         })
     })
 }
