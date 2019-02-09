@@ -1,8 +1,8 @@
 const Koa = require('koa');
 const app = new Koa();
-// const {htmlTpl, ejsTpl, pugTpl} = require('./tpl/index');
-// const ejs = require('ejs');
-// const pug = require('pug');
+const {htmlTpl, ejsTpl, pugTpl} = require('./tpl/index');
+const ejs = require('ejs');
+const pug = require('pug');
 // const {connect} = require('./database/init')
 
 // ;(async () => {
@@ -11,13 +11,11 @@ const app = new Koa();
 
 
 app.use(async (ctx, next) => {
-	// ctx.type = 'text/html; charset=utf-8';
-	// ctx.body = pug.
-	// render(pugTpl, {
-	// 	name: 'jehol',
-	// 	pageTitle: '电影预告片'
-	// });
-	ctx.body = 'hello world';
+	ctx.type = 'text/html; charset=utf-8';
+	ctx.body = pug.render(pugTpl, {
+		name: 'jehol',
+		pageTitle: '电影预告片'
+	});
 });
 
 

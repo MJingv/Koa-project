@@ -1,22 +1,16 @@
 # Koa-project
 
 ---
+[koa 学习笔记]()
 
-http 接收 解析 响应
+增加模版
+===
 
-中间件 执行上下文
+> ejs vs pug
+> >可传递变量，语法不同，pug更简洁
 
----
 
-### koa核心对象
 
-Application
-Context
 
-Request
-Response
 
-Middlewares
 
-Session
-Cookie
