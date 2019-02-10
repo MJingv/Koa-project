@@ -15,7 +15,7 @@ const sleep = time => new Promise(res => {
 	await sleep(3000);
 
 	await page.waitForSelector('.more');
-	for (let i = 0; i < 1; i++) {
+	for (let i = 0; i < 2; i++) {
 		await sleep(2000);
 		await page.click('.more');
 	}
