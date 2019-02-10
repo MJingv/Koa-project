@@ -10,6 +10,23 @@
 > 1. ejs vs pug
 
 
+#### 数据爬取
+- 获取
+> 1. 模拟浏览器 phantomJS NightMare **pupeteer**
+> 1. API 同步接口
+- 存储
+> 1. mongoDB
+- others
+> 1. koa2 父子进程通信
+
+
+#### others
+> 1. 视频播放器 dplayer
+> 1. 构建工具 parcel
+> 1. 爬数据 puppeteer
+> 1. 视频播放器 dplayer
+
+
 
 
 
