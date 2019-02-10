@@ -6,7 +6,6 @@ const sleep = time => new Promise(res => {
 	})
 
 ;(async () => {
-	console.log('start ------ ');
 	const browser = await puppeteer.launch();
 
 	const page = await browser.newPage();
@@ -24,7 +23,6 @@ const sleep = time => new Promise(res => {
 	const result = await page.evaluate(() => {
 		let $ = window.$;
 		let items = $('.list-wp a');
-		console.log(items, '=====');
 		let links = [];
 		if (items.length > 0) {
 			items.each((index, item) => {
@@ -43,6 +41,8 @@ const sleep = time => new Promise(res => {
 	});
 
 	await browser.close();
-	console.log(result);
+
+	process.send({result});
+	process.exit(0);
 
 })();
