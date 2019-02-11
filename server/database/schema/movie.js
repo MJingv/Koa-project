@@ -34,5 +34,14 @@ const movieSchema = new Schema({
 		}
 	}
 });
+movieSchema.pre('save', function (next) {
+	//保存前预处理
+	if (this.isNew) {
+		this.meta.createAt = this.meta.updateAt = Date.now();
+	} else {
+		this.meta.updateAt = Date.now();
+	}
+	next();
+});
 
 mongoose.model('Movie', movieSchema);
