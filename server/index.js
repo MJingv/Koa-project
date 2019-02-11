@@ -3,11 +3,19 @@ const app = new Koa();
 const pug = require('pug');
 const views = require('koa-views');
 const {resolve} = require('path');
-const {connect} = require('./database/init');
-
+const {connect, initSchemas} = require('./database/init');
+const mongoose = require('mongoose')
 
 ;(async () => {
 	await connect();
+
+	initSchemas();
+
+	const Movie = mongoose.model('Movie');
+	const movies = await Movie.find({});
+
+	console.log(movies);
+
 })();
 
 
