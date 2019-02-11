@@ -32,7 +32,6 @@ const userSchema = new Schema({
 		require: true,
 		default: 0
 	},
-	isLocked: Boolean,
 	lockUntil: Number,
 	meta: {
 		createAt: {
@@ -44,6 +43,11 @@ const userSchema = new Schema({
 			default: Date.now()
 		}
 	}
+});
+
+userSchema.virtual('isLocked').get(function () {
+	//虚拟字段
+	return !!(this.lockUntil && this.lockUntil > Date.now());
 });
 
 

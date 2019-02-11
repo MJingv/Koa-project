@@ -4,17 +4,21 @@ const pug = require('pug');
 const views = require('koa-views');
 const {resolve} = require('path');
 const {connect, initSchemas} = require('./database/init');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 ;(async () => {
 	await connect();
-
 	initSchemas();
 
-	const Movie = mongoose.model('Movie');
-	const movies = await Movie.find({});
+	//初始化爬数据
+	// require('./tasks/movie');
+	// require('./tasks/api');
 
-	console.log(movies);
+
+	// const Movie = mongoose.model('Movie');
+	// const movies = await Movie.find({});
+	//
+	// console.log(movies);
 
 })();
 
