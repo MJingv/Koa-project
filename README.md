@@ -24,7 +24,7 @@
 > 1. 视频播放器 dplayer
 > 1. 构建工具 parcel
 > 1. 爬数据 puppeteer
-> 1. 视频播放器 dplayer
+> 1. 用户密码加盐处理 bcrypt
 
 
 
