@@ -44,7 +44,6 @@ const sleep = time => new Promise(res => {
 
 			if (it && it.length) {
 				return it.attr('src');
-
 			}
 			return '';
 		});

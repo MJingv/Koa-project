@@ -3,13 +3,14 @@ const app = new Koa();
 const pug = require('pug');
 const views = require('koa-views');
 const {resolve} = require('path');
+const {connect} = require('./database/init');
 
 
-// const {connect} = require('./database/init')
+;(async () => {
+	await connect();
+})();
 
-// ;(async () => {
-// 	await connect();
-// })();
+
 app.use(views(resolve(__dirname, './views'), {
 	extension: 'pug'
 }));
