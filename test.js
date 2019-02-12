@@ -1,27 +1,79 @@
 const Koa = require('koa');
 const session = require('koa-session');
 const logger = require('koa-logger');
-const app = new Koa();
+const EventEmitter = require('events');
+const {readFile} = require('fs');
 
-app.keys = ['jehol'];
+// const app = new Koa();
+//
+// app.keys = ['jehol'];
+//
+// app.use(logger());
+// app.use(session(app));
+//
+//
+// app.use(async ctx => {
+// 	ctx.body = 'Hello World';
+//
+// });
+//
+// app.listen(3000);
 
-app.use(logger());
-app.use(session(app));
+class EE extends EventEmitter {
 
+}
 
-app.use(async ctx => {
-	ctx.body = 'Hello World';
-	if (ctx.path === '/favicon.co') return;
-	let n = ctx.session.views || 0;
-	ctx.session.views = ++n;
-	ctx.body += ctx.session.views;
+const yy = new EE();
 
-	if (ctx.path === '/') {
-		ctx.body = 'HOME';
-	}
-	if (ctx.path === '/page') {
-		ctx.body = 'PAGE';
-	}
+yy.on('event', () => {
+	console.log('aaaa-------');
 });
 
-app.listen(3000);
+setTimeout(() => {
+	console.log('0 ms timeout');
+}, 0);
+
+setTimeout(() => {
+	console.log('100 ms timeout');
+}, 100);
+
+setTimeout(() => {
+	console.log('200 ms timeout');
+}, 200);
+
+
+readFile('./README.md', 'utf-8', data => {
+	console.log('读第11111个文件cb');
+});
+
+readFile('./koa学习笔记.md', 'utf-8', data => {
+	console.log('读第2222个文件cb');
+});
+
+readFile('./加密学习笔记.md', 'utf-8', data => {
+	console.log('读第33333个文件cb');
+});
+
+
+setImmediate(() => {
+	console.log('------setImmediate');
+});
+process.nextTick(() => {
+	console.log('process.nextTick的cb');
+});
+
+Promise.resolve().then(() => {
+	yy.emit('event');
+
+	process.nextTick(() => {
+		console.log('promise 里的nextticket');
+	});
+	console.log('promise里的1111111cb');
+
+
+}).then(() => {
+	console.log('promise里的22222cb');
+
+});
+
+console.log('start---');
