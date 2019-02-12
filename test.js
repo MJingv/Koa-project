@@ -74,6 +74,9 @@ Promise.resolve().then(() => {
 }).then(() => {
 	console.log('promise里的22222cb');
 
-});
+}).then(() => {
+	console.log('promise里的333333cb');
+
+})
 
 console.log('start---');
