@@ -3,10 +3,9 @@
 ---
 ### 学习笔记
 - [koa 学习笔记](https://github.com/MJingv/Koa-project/blob/master/koa%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
-- [mongodb 学习笔记](https://github.com/MJingv/Koa-project/blob/master/koa%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
-- [加密 学习笔记](https://github.com/MJingv/Koa-project/blob/master/koa%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
-- [进程 学习笔记](https://github.com/MJingv/Koa-project/blob/master/koa%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
-- [koa 学习笔记](https://github.com/MJingv/Koa-project/blob/master/koa%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
+- [mongodb 学习笔记](https://github.com/MJingv/Koa-project/blob/master/mongodb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
+- [加密 学习笔记](https://github.com/MJingv/Koa-project/blob/master/%E5%8A%A0%E5%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
+- [进程 学习笔记](https://github.com/MJingv/Koa-project/blob/master/%E8%BF%9B%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
 
 ### 项目相关
 
