@@ -82,44 +82,43 @@
 // console.log('start---');
 
 
-// function Parent(value) {
-// 	this.val = value;
-//
-// }
-//
-// Parent.prototype.getVal = function () {
-// 	console.log(this.val);
-// };
-//
-//
-// function Child(value) {
-// 	Parent.call(this, value); //super
-// }
-//
-// // Child.prototype = new Parent();
-//
+function Parent(value) {
+	this.name = value;
+
+}
+
+Parent.prototype.say = function () {
+	console.log(this.name + '----');
+};
+
+
+function Child(value) {
+	Parent.call(this, value); //super
+}
+
+// Child.prototype = new Parent();
+
 // Child.prototype = Object.create(Parent.prototype, {
 // 	constructor: {
 // 		value: Child,
 // 		enumerable: false,
 // 		writable: true,
-// 		configurable:true,
+// 		configurable: true,
 // 	}
 // });
+
+let c = new Child('jehol');
+c.say();
+
+
+// const arr = [1, 2, 3];
 //
-// let child = new Child(1);
-// child.getVal();//1
-// console.log(child instanceof Parent);//true
-
-
-const arr = [1, 2, 3];
-
-let myMap = arr.reduce((pre, curr, index, arr) => {
-	pre.push(curr * 2);
-	return pre;
-
-}, []);
-console.log(myMap);
+// let myMap = arr.reduce((pre, curr, index, arr) => {
+// 	pre.push(curr * 2);
+// 	return pre;
+//
+// }, []);
+// console.log(myMap);
 
 
 
