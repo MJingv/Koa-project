@@ -81,34 +81,35 @@
 //
 // console.log('start---');
 
-
-function Parent(value) {
-	this.name = value;
-
-}
-
-Parent.prototype.say = function () {
-	console.log(this.name + '----');
-};
-
-
-function Child(value) {
-	Parent.call(this, value); //super
-}
-
-// Child.prototype = new Parent();
-
+//
+// function Parent(value) {
+// 	this.name = value;
+//
+// }
+//
+// Parent.prototype.say = function () {
+// 	console.log(this.name+'----');
+// };
+//
+//
+// function Child(value) {
+// 	Parent.call(this, value); //super
+// }
+//
+// // Child.prototype = new Parent();
+//
 // Child.prototype = Object.create(Parent.prototype, {
 // 	constructor: {
 // 		value: Child,
 // 		enumerable: false,
 // 		writable: true,
-// 		configurable: true,
+// 		configurable:true,
 // 	}
 // });
-
-let c = new Child('jehol');
-c.say();
+//
+// let child = new Child(1);
+// child.getVal();//1
+// console.log(child instanceof Parent);//true
 
 
 // const arr = [1, 2, 3];
@@ -121,4 +122,24 @@ c.say();
 // console.log(myMap);
 
 
-
+// const throttle = (fn, delay) => {
+// 	let last = null;
+// 	return () => {
+// 		const now = +new Date();
+// 		if (now - last > delay) {
+// 			fn();
+// 			last = now;
+// 		}
+// 	};
+// };
+//
+//
+// const debouce = (fn, delay) => {
+// 	let timer = null;
+// 	return () => {
+// 		clearTimeout(timer);
+// 		timer = setTimeout(() => {
+// 			fn();
+// 		}, delay);
+// 	};
+// };

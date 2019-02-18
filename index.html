@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 
 <body>
+<style>
+    html, body {
+        height: 100%;
 
-<div id="f" style="background-color:red; height: 200px;">
-    <div id="c" style="display: flex;align-items: center;justify-content: center">
-        <div id="cc">A</div>
-    </div>
+    }
+
+    #f {
+        background-color: red;
+        height: 200px;
+
+    }
+
+    #c {
+        background-color: yellow;
+
+    }
+
+</style>
+<div id="f">
+    <div id="c">aa</div>
 </div>
 <script>
-	let ul = document.querySelector('#ul');
-	ul.addEventListener('click', (event) => {
-		console.log(event.target);
-		console.log(event.currentTarget);
-	});
+
 </script>
 </body>
 

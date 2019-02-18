@@ -65,32 +65,60 @@
 // });
 // console.log('srcipet end');
 //
+
+//
 // const obj = {
-// 	name: 'jscoder',
-// 	skill: ['es6', 'react', 'angular'],
+// 	name: 'jehol',
+// 	skill: ['vue', 'react', 'angular'],
 // 	say: function () {
 // 		for (let i = 1, len = this.skill.length; i <= len; i++) {
-// 			const t = this;
-// 			// (function (i) {
-// 			// 	setTimeout(function timer() {
-// 			// 		console.log('no' + i + t.name);
-// 			// 		console.log(t.skill[i-1]);
-// 			// 		console.log('----');
-// 			// 	}, 0);
-// 			// })(i);
-//
-// 				setTimeout(function timer() {
-// 					console.log('no' + i + t.name);
-// 					console.log(t.skill[i-1]);
-// 					console.log('----');
-// 				}, 0);
-//
-//
+// 			setTimeout(() => {
+// 				console.log('no' + i + this.name);
+// 				console.log(this.skill[i - 1]);
+// 				console.log('----' + i);
+// 			}, 0);
 // 			console.log(i);
-//
 // 		}
-//
 // 	}
 // };
 //
 // obj.say();
+
+
+// function Animal(name, color) {
+// 	this.name = name;
+// 	this.color = color;
+// }
+//
+// Animal.prototype.say = function () {
+// 	let res = `i am a ${this.color} - ${this.name}`;
+// 	console.log(res);
+// 	return res;
+// };
+//
+//
+// const Cat = Animal.mybind(null, 'cat');
+// const cat = new Cat('white');
+//
+// if (cat.say() === 'i am a white - cat' && cat instanceof Cat && cat instanceof Animal) {
+// 	console.log('success');
+// }
+
+
+Function.prototype.mybind = function (ctx, ...res) {
+	return () => {
+		this.call(ctx, res);
+	};
+
+};
+
+
+function sayname(arg) {
+	console.log(this.name, 'arg', ...arg);
+}
+
+let obj = {
+	name: 'jehol'
+};
+
+sayname.mybind(obj, '我是参数')();
